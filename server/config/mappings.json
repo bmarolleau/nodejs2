@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "appid_client_id": {
+    "searchPatterns": [
+      "user-provided:auth-name:clientId",
+      "cloudfoundry:$['AppID'][0].credentials.clientId",
+      "env:service_appid:$.clientId",
+      "env:appid_clientId",
+      "file:/server/localdev-config.json:$.appid_clientId"
+    ]
+  },
+  "appid": {
+    "credentials": {
+      "searchPatterns": [
+        "user-provided:auth-name:tenantId",
+        "cloudfoundry:appid",
+        "env:appid_credentials",
+        "file://localdev-config.json:appid_credentials"
+      ]
+    }
+  },
+  "appid_oauth_server_url": {
+    "searchPatterns": [
+      "user-provided:auth-name:oauthServerUrl",
+      "cloudfoundry:$['AppID'][0].credentials.oauthServerUrl",
+      "env:service_appid:$.oauthServerUrl",
+      "env:appid_oauthServerUrl",
+      "file:/server/localdev-config.json:$.appid_oauthServerUrl"
+    ]
+  },
+  "appid_profiles_url": {
+    "searchPatterns": [
+      "user-provided:auth-name:profilesUrl",
+      "cloudfoundry:$['AppID'][0].credentials.profilesUrl",
+      "env:service_appid:$.profilesUrl",
+      "env:appid_profilesUrl",
+      "file:/server/localdev-config.json:$.appid_profilesUrl"
+    ]
+  },
+  "appid_secret": {
+    "searchPatterns": [
+      "user-provided:auth-name:secret",
+      "cloudfoundry:$['AppID'][0].credentials.secret",
+      "env:service_appid:$.secret",
+      "env:appid_secret",
+      "file:/server/localdev-config.json:$.appid_secret"
+    ]
+  },
+  "appid_tenant_id": {
+    "searchPatterns": [
+      "user-provided:auth-name:tenantId",
+      "cloudfoundry:$['AppID'][0].credentials.tenantId",
+      "env:service_appid:$.tenantId",
+      "env:appid_tenantId",
+      "file:/server/localdev-config.json:$.appid_tenantId"
+    ]
+  },
+  "postgre_ca_certificate_base64": {
+    "searchPatterns": [
+      "user-provided:my-postgresql:ca_certificate_base64",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.ca_certificate_base64",
+      "env:service_postgre:$.ca_certificate_base64",
+      "env:postgre_ca_certificate_base64",
+      "file:/server/localdev-config.json:$.postgre_ca_certificate_base64"
+    ]
+  },
+  "postgre": {
+    "credentials": {
+      "searchPatterns": [
+        "user-provided:my-postgresql:uri_direct_1",
+        "cloudfoundry:postgre",
+        "env:postgre_credentials",
+        "file://localdev-config.json:postgre_credentials"
+      ]
+    }
+  },
+  "postgre_db_type": {
+    "searchPatterns": [
+      "user-provided:my-postgresql:db_type",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.db_type",
+      "env:service_postgre:$.db_type",
+      "env:postgre_db_type",
+      "file:/server/localdev-config.json:$.postgre_db_type"
+    ]
+  },
+  "postgre_deployment_id": {
+    "searchPatterns": [
+      "user-provided:my-postgresql:deployment_id",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.deployment_id",
+      "env:service_postgre:$.deployment_id",
+      "env:postgre_deployment_id",
+      "file:/server/localdev-config.json:$.postgre_deployment_id"
+    ]
+  },
+  "postgre_name": {
+    "searchPatterns": [
+      "user-provided:my-postgresql:name",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.name",
+      "env:service_postgre:$.name",
+      "env:postgre_name",
+      "file:/server/localdev-config.json:$.postgre_name"
+    ]
+  },
+  "postgre_uri": {
+    "searchPatterns": [
+      "user-provided:my-postgresql:uri",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.uri",
+      "env:service_postgre:$.uri",
+      "env:postgre_uri",
+      "file:/server/localdev-config.json:$.postgre_uri"
+    ]
+  },
+  "postgre_uri_cli": {
+    "searchPatterns": [
+      "user-provided:my-postgresql:uri_cli",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.uri_cli",
+      "env:service_postgre:$.uri_cli",
+      "env:postgre_uri_cli",
+      "file:/server/localdev-config.json:$.postgre_uri_cli"
+    ]
+  },
+  "postgre_uri_cli_1": {
+    "searchPatterns": [
+      "user-provided:my-postgresql:uri_cli_1",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.uri_cli_1",
+      "env:service_postgre:$.uri_cli_1",
+      "env:postgre_uri_cli_1",
+      "file:/server/localdev-config.json:$.postgre_uri_cli_1"
+    ]
+  },
+  "postgre_uri_direct_1": {
+    "searchPatterns": [
+      "user-provided:my-postgresql:uri_direct_1",
+      "cloudfoundry:$['compose-for-postgresql'][0].credentials.uri_direct_1",
+      "env:service_postgre:$.uri_direct_1",
+      "env:postgre_uri_direct_1",
+      "file:/server/localdev-config.json:$.postgre_uri_direct_1"
+    ]
+  },
+  "watson_assistant_password": {
+    "searchPatterns": [
+      "user-provided:conversation-name:password",
+      "cloudfoundry:$['conversation'][0].credentials.password",
+      "env:service_watson_assistant:$.password",
+      "env:watson_assistant_password",
+      "file:/server/localdev-config.json:$.watson_assistant_password"
+    ]
+  },
+  "watson_assistant": {
+    "credentials": {
+      "searchPatterns": [
+        "user-provided:conversation-name:username",
+        "cloudfoundry:watson_assistant",
+        "env:watson_assistant_credentials",
+        "file://localdev-config.json:watson_assistant_credentials"
+      ]
+    }
+  },
+  "watson_assistant_url": {
+    "searchPatterns": [
+      "user-provided:conversation-name:url",
+      "cloudfoundry:$['conversation'][0].credentials.url",
+      "env:service_watson_assistant:$.url",
+      "env:watson_assistant_url",
+      "file:/server/localdev-config.json:$.watson_assistant_url"
+    ]
+  },
+  "watson_assistant_username": {
+    "searchPatterns": [
+      "user-provided:conversation-name:username",
+      "cloudfoundry:$['conversation'][0].credentials.username",
+      "env:service_watson_assistant:$.username",
+      "env:watson_assistant_username",
+      "file:/server/localdev-config.json:$.watson_assistant_username"
+    ]
+  },
+  "watson_conversation_password": {
+    "searchPatterns": [
+      "user-provided:conversation-name:password",
+      "cloudfoundry:$['conversation'][0].credentials.password",
+      "env:service_watson_conversation:$.password",
+      "env:watson_conversation_password",
+      "file:/server/localdev-config.json:$.watson_conversation_password"
+    ]
+  },
+  "watson_conversation": {
+    "credentials": {
+      "searchPatterns": [
+        "user-provided:conversation-name:username",
+        "cloudfoundry:watson_conversation",
+        "env:watson_conversation_credentials",
+        "file://localdev-config.json:watson_conversation_credentials"
+      ]
+    }
+  },
+  "watson_conversation_url": {
+    "searchPatterns": [
+      "user-provided:conversation-name:url",
+      "cloudfoundry:$['conversation'][0].credentials.url",
+      "env:service_watson_conversation:$.url",
+      "env:watson_conversation_url",
+      "file:/server/localdev-config.json:$.watson_conversation_url"
+    ]
+  },
+  "watson_conversation_username": {
+    "searchPatterns": [
+      "user-provided:conversation-name:username",
+      "cloudfoundry:$['conversation'][0].credentials.username",
+      "env:service_watson_conversation:$.username",
+      "env:watson_conversation_username",
+      "file:/server/localdev-config.json:$.watson_conversation_username"
+    ]
+  }
+}
